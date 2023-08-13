@@ -1,0 +1,275 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-08-13T18:45:56.443Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12124307200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageSteps.before(Scenario)"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "Successful Registration",
+        "description": "",
+        "id": "cloudm-user-registration;successful-registration",
+        "after": [
+          {
+            "result": {
+              "duration": 616182900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageSteps.after(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 43310182400,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10006794500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 7,
+            "name": "that I am on the CloudM Homepage",
+            "match": {
+              "location": "CloudMRegistrationPage.that_I_am_on_the_CloudM_Homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 396100,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10000434000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 8,
+            "name": "I locate the \u0027My Account\u0027 link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027My Account\u0027",
+                  "offset": 13
+                }
+              ],
+              "location": "CloudMRegistrationPage.i_locate_the_link(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2124234300,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10005964900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 9,
+            "name": "I should be able to click on the \u0027My Account\u0027 link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027My Account\u0027",
+                  "offset": 33
+                }
+              ],
+              "location": "CloudMRegistrationPage.i_should_be_able_to_click_on_the_link(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 360935100,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10006582400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 10,
+            "name": "it should navigate me to the login or registration page \u0027CloudM Portal\u0027 of the application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027CloudM Portal\u0027",
+                  "offset": 56
+                }
+              ],
+              "location": "CloudMRegistrationPage.it_should_navigate_me_to_the_login_or_registration_page_of_the_application(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1449144600,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10005495000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 11,
+            "name": "click on the Registration link",
+            "match": {
+              "location": "CloudMRegistrationPage.click_on_the_Registration_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1859234800,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10005162800,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 12,
+            "name": "Fill the registration Form with the below Details",
+            "match": {
+              "location": "CloudMRegistrationPage.fill_the_registration_Form_with_the_below_Details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Email",
+                  "FirstName",
+                  "LastName",
+                  "Password",
+                  "RetypePassword",
+                  "SelectDropdown"
+                ]
+              },
+              {
+                "cells": [
+                  "ksravanthi426@gmail.com",
+                  "Sravanthi",
+                  "Koduri",
+                  "Keerthana@426",
+                  "Keerthana@426",
+                  "CloudM Migrate to Google Workspace"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 236746600,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10008668300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 15,
+            "name": "Click on Check box",
+            "match": {
+              "location": "CloudMRegistrationPage.Click_on_Check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4410224000,
+              "status": "passed"
+            },
+            "before": [
+              {
+                "result": {
+                  "duration": 10002100400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "HomePageSteps.beforeStep()"
+                }
+              }
+            ],
+            "line": 16,
+            "name": "Click on Create Account button",
+            "match": {
+              "location": "CloudMRegistrationPage.Click_on_Create_Account_button()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Regression1"
+          }
+        ]
+      }
+    ],
+    "name": "CloudM User Registration",
+    "description": "  As a user, I want to click the \u0027My Account\u0027 link on the CloudM Homepage so that I can login or Register to the application.",
+    "id": "cloudm-user-registration",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/CloudMHomePage/CloudMRegistrationPage.feature",
+    "tags": []
+  }
+]

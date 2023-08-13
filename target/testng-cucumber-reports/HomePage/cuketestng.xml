@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testng-results failed="0" passed="1" skipped="0" total="1">
+    <suite duration-ms="146532" name="cucumber.runtime.formatter.TestNGFormatter">
+        <test duration-ms="146532" name="cucumber.runtime.formatter.TestNGFormatter">
+            <class name="CloudM User Registration">
+                <test-method duration-ms="146532" finished-at="2023-08-13T19:48:23Z" name="Successful Registration" started-at="2023-08-13T19:48:23Z" status="PASS"/>
+            </class>
+        </test>
+    </suite>
+</testng-results>

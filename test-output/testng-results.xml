@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-13T18:45:55Z" name="QATechTesting Test Suite" finished-at="2023-08-13T18:48:24Z" duration-ms="148530">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:runner.HomePageRunner@3315d2d7]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-08-13T18:45:55Z" name="Navigate and Verify Home Page" finished-at="2023-08-13T18:48:24Z" duration-ms="148530">
+      <class name="runner.HomePageRunner">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.HomePageRunner@3315d2d7]" started-at="2023-08-13T18:45:55Z" name="setUpClass" finished-at="2023-08-13T18:45:55Z" duration-ms="359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="before()[pri:0, instance:runner.HomePageRunner@3315d2d7]" started-at="2023-08-13T18:45:55Z" name="before" finished-at="2023-08-13T18:45:55Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:runner.HomePageRunner@3315d2d7]" started-at="2023-08-13T18:45:56Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-08-13T18:48:22Z" duration-ms="146865" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful Registration"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["CloudM User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="after()[pri:0, instance:runner.HomePageRunner@3315d2d7]" started-at="2023-08-13T18:48:22Z" name="after" finished-at="2023-08-13T18:48:22Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.HomePageRunner@3315d2d7]" started-at="2023-08-13T18:48:22Z" name="tearDownClass" finished-at="2023-08-13T18:48:24Z" duration-ms="1041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.HomePageRunner -->
+    </test> <!-- Navigate and Verify Home Page -->
+  </suite> <!-- QATechTesting Test Suite -->
+</testng-results>
