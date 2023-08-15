@@ -78,7 +78,7 @@ public class webconnector<V> {
            saveScreenshotsForScenario(scenario);
         }
        
-        driver.close();
+        driver.quit();
        
         
         

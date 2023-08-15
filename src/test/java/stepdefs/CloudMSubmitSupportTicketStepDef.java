@@ -121,12 +121,13 @@ public class CloudMSubmitSupportTicketStepDef extends webconnector {
 	   // WebElement element=this.wc.FindAnElement("CloudM_DetailRegistration_Submit");
 		//this.homePage.verifyText(element, expectedButtonName);
 	    this.wc.PerformActionOnElement("CloudM_DetailRegistration_Submit", "Click", "");
-	    Thread.sleep(10000);
+	    Thread.sleep(30000);
 	}
 	@Then("validate the success message {string}")
 	public void validate_the_success_message(String expectedSuccessMessage) throws Exception {
 	   WebElement element=this.wc.FindAnElement("CloudM_DetailRegistration_SubmitSuccessMessage");
 		this.homePage.verifyText(element, expectedSuccessMessage);
+		Thread.sleep(5000);
 	    
 	}
 }
