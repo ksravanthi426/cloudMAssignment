@@ -73,18 +73,7 @@ public class CloudMRegistrationPage extends webconnector {
 	public void click_on_the_Registration_link() throws Exception
 	
 	{
-		/*
-		 * this.homePage.goToHomePage(); driver.manage().timeouts().implicitlyWait(20,
-		 * TimeUnit.MICROSECONDS); if(FindAnElement("Accept_Cookies").isDisplayed()) {
-		 * this.homePage.clickOnAcceptCookies(); }
-		 * driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		 * System.out.println("Executed the Rigistration Page");
-		 * this.homePage.clickOnHiddenElement(FindAnElement("My_AccountLink"));
-		 * this.homePage.windowHandle();
-		 * System.out.println("Executed the Rigistration Page"); try {
-		 * this.homePage.clickOnAcceptCookies(); } catch (Exception e) { // TODO: handle
-		 * exception }
-		 */
+
 		this.wc.PerformActionOnElement("CloudM_Registration", "Click", "");
 	}
 	@Given("I enter my details:")
@@ -124,6 +113,10 @@ public class CloudMRegistrationPage extends webconnector {
     @Then("I should see a confirmation message")
     public void I_should_see_a_confirmation_message() throws Exception
     {
+    	String expectedText="Couldn't save user.";
+    	WebElement element=wc.FindAnElement("CloudM_Registration_ConfirmationMessage2");
+    	this.homePage.verifyText(element, expectedText);
+    	System.out.println("Registration confirmation message validated successfully");
     	
     	
     }

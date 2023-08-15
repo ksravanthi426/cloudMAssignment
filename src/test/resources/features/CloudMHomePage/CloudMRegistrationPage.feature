@@ -2,7 +2,7 @@
 Feature: Accessing CloudM Portal Registration
   As a user I want to click on the 'Portal' link on the cloudM HomePage so that I can Register to the CloudM Portal
    
- @Regression
+ @Regression @TC01
   Scenario: Clicking on the 'Portal' link to register for CloudM Portal
     Given that I am on the CloudM Homepage
     When I click on the 'Portal' link

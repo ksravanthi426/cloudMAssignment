@@ -1,6 +1,9 @@
 Feature: MouseHover and Click on Register a Deal Link from For Partners
 
-  @Regression
+As a user I want to Mouse Hover for Partners link and click on the Register a Deal Link on the 
+CloudMHome Page so that I can register the deal
+
+  @Regression @TC02
   Scenario: User registers a deal on CloudM Home Page
 			Given the user is on the CloudM Home Page
 			When the user mouse hovers over the "For Partners" link

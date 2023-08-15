@@ -20,7 +20,7 @@ import WebConnector.webconnector;
 public class CloudMHomePage {
 	webconnector wc=new webconnector();
     public void goToHomePage() throws InvalidFormatException, IOException{
-    	String URL=wc.getSpecificColumnData("./src/test/testdata/data.xlsx","sheet2", "URL");
+    	String URL=wc.getSpecificColumnData("./src/test/testdata/data.xlsx","sheet1", "URL");
         driver.get(URL);
         wc.waitForCondition("PageLoad","",60);
     }
