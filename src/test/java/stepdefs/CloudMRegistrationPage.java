@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
 import ApplicationPages.CloudMHomePage;
 import ApplicationPages.Homepage;
 import WebConnector.webconnector;
@@ -31,17 +34,14 @@ public class CloudMRegistrationPage extends webconnector {
 		{
 		this.homePage.clickOnAcceptCookies();
 		}
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		/*
-		 * if(FindAnElement("Initial_Message").isDisplayed()) {
-		 * wc.PerformActionOnElement("Initial_Message", "Click", ""); }
-		 */	
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);	
 	}
-
-	@When("I locate the {string} link")
+	@When("I click on the {string} link")
 	public void i_locate_the_link(String string) throws Exception {
 	   
-		  
+		System.out.println("Executed the Rigistration Page");
+		 this.homePage.clickOnHiddenElement(FindAnElement("My_AccountLink"));
+		 this.homePage.windowHandle();
 
 	}
 
@@ -53,11 +53,11 @@ public class CloudMRegistrationPage extends webconnector {
 			 * if(FindAnElement("Accept_Cookies").isDisplayed()) {
 			 *  }
 			 */
+		 this.homePage.windowHandle();
 		 
 	}
-
-	@Then("it should navigate me to the login or registration page {string} of the application")
-	public void it_should_navigate_me_to_the_login_or_registration_page_of_the_application(String expectedPageTitle) throws Exception {
+	@Then("I should be redirected to the {string} registration page")
+	public void I_should_be_redirected_to_the_registration_page(String expectedPageTitle) throws Exception {
 	    System.out.println("Executed the Rigistration Page");
 	    try 
 	    {
@@ -66,18 +66,30 @@ public class CloudMRegistrationPage extends webconnector {
 	    catch (Exception e) {
 			// TODO: handle exception
 		}
-	    this.homePage.verifyText(expectedPageTitle);
+	    WebElement element=this.wc.FindAnElement("CloudM_Portal");
+	    this.homePage.verifyText(element,expectedPageTitle);
 	    
 	}
-	
-	@Then("click on the Registration link")
+	@Then("I am on the CloudM Portal registration page")
 	public void click_on_the_Registration_link() throws Exception
 	
 	{
+		/*
+		 * this.homePage.goToHomePage(); driver.manage().timeouts().implicitlyWait(20,
+		 * TimeUnit.MICROSECONDS); if(FindAnElement("Accept_Cookies").isDisplayed()) {
+		 * this.homePage.clickOnAcceptCookies(); }
+		 * driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		 * System.out.println("Executed the Rigistration Page");
+		 * this.homePage.clickOnHiddenElement(FindAnElement("My_AccountLink"));
+		 * this.homePage.windowHandle();
+		 * System.out.println("Executed the Rigistration Page"); try {
+		 * this.homePage.clickOnAcceptCookies(); } catch (Exception e) { // TODO: handle
+		 * exception }
+		 */
 		this.wc.PerformActionOnElement("CloudM_Registration", "Click", "");
 	}
-	@Given("Fill the registration Form with the below Details")
-	public void fill_the_registration_Form_with_the_below_Details(DataTable dataTable) throws Exception {
+	@Given("I enter my details:")
+	public void I_enter_my_details(DataTable dataTable) throws Exception {
 		List<Map<String, String>> details = dataTable.asMaps(String.class, String.class);
 
         for (Map<String, String> row : details) {
@@ -93,7 +105,8 @@ public class CloudMRegistrationPage extends webconnector {
              this.wc.PerformActionOnElement("CloudM_Registration_LastName", "Type", lastName);
              this.wc.PerformActionOnElement("CloudM_Registration_Password", "Type", password);
              this.wc.PerformActionOnElement("CloudM_Registration_RetypePassword", "Type", retypePassword);
-             this.homePage.selectdropdownValue(seclectDropDownValue);
+             WebElement element=this.wc.FindAnElement("CloudM_Registration_SelectCloudMProduct");
+             this.homePage.selectdropdownValue(element,seclectDropDownValue);
             
         }
 	}
@@ -102,11 +115,17 @@ public class CloudMRegistrationPage extends webconnector {
 	{
 	this.wc.PerformActionOnElement("CloudM_Registration_CheckBoxId", "Click", "");	
 	}
-	
     @Then("Click on Create Account button")
     public void Click_on_Create_Account_button() throws Exception
     {
     	this.wc.PerformActionOnElement("CloudM_Registration_CreateAccount", "Click", "");
+    	
+    }
+
+    @Then("I should see a confirmation message")
+    public void I_should_see_a_confirmation_message() throws Exception
+    {
+    	
     	
     }
 }
